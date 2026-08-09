@@ -27,3 +27,5 @@ npm start
 The server will be available at:
 
 http://localhost:3000
+
+# Greenfield Dev Container — Node.js Application
