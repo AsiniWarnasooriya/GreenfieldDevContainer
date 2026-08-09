@@ -1,5 +1,7 @@
-# Greenfield Dev Container — Workspace Edition
 
+# Greenfield Dev Container — Node.js Workspace Edition
+
+ practice/conflict-right
 ## Requirements
 
 - Docker Desktop
