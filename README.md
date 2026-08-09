@@ -1,4 +1,4 @@
-# Greenfield Node Workspace
+# Greenfield Dev Container — Workspace Edition
 
 ## Requirements
 
