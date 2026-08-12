@@ -1,17 +1,15 @@
 {
-    "name": "Greenfield Node Workspace",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
-    "workspaceFolder": "/workspace",
-    "remoteUser": "node",
-    "forwardPorts": [3000],
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "dbaeumer.vscode-eslint",
-                "ms-azuretools.vscode-docker"
-            ]
-        }
-    }
+  "name": "Greenfield Node Workspace",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+  "postCreateCommand": "python -m pip install --user mkdocs",
+  "forwardPorts": [
+    3000,
+    8000
+  ]
 }
