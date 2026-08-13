@@ -1,15 +1,21 @@
 {
   "name": "Greenfield Node Workspace",
+
   "build": {
     "dockerfile": "Dockerfile",
     "context": ".."
   },
+
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {}
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
   },
-  "postCreateCommand": "python -m pip install --user mkdocs",
+
   "forwardPorts": [
     3000,
     8000
-  ]
+  ],
+
+  "postCreateCommand": "python -m pip install --break-system-packages mkdocs-material"
 }

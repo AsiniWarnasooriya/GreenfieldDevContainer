@@ -1,5 +1,6 @@
 node_modules
 .env
 
-# Generated MkDocs site
+.venv/
+.venv-old/
 site/
