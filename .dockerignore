@@ -1,0 +1,7 @@
+.git
+node_modules/
+.env
+.venv/
+.venv-old/
+site/
+.vscode/

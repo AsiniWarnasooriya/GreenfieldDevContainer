@@ -1,0 +1,26 @@
+site_name: Greenfield Dev Container
+
+theme:
+  name: material
+
+docs_dir: docs
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: index.md
+  - Tutorial:
+      - Getting Started: tutorial/getting-started.md
+  - How-to:
+      - Run the Application: how-to/run-the-application.md
+  - Reference:
+      - Configuration: reference/configuration.md
+  - Explanation:
+      - Dev Containers: explanation/dev-containers.md
+  - Decisions:
+      - Use a Dev Container: adr/0001-use-dev-container.md
