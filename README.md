@@ -48,3 +48,11 @@ git commit -m "docs(readme): document the about section" -m "Explain the purpose
 
 Refs #1"
 # Greenfield Dev Container — Development Workspace
+
+## Documentation
+
+- [Getting started](docs/tutorial/getting-started.md)
+- [Run the application](docs/how-to/run-the-application.md)
+- [Configuration](docs/reference/configuration.md)
+- [Dev Containers](docs/explanation/dev-containers.md)
+- [Architectural decisions](docs/adr/0001-use-dev-container.md)
