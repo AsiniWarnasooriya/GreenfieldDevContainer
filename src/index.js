@@ -1,9 +1,14 @@
 const express = require("express");
 const config = require("./config");
+const logger = require("./logger");
 
 const app = express();
 
 app.get("/", (req, res) => {
+  logger.debug("Home page requested", {
+  method: req.method,
+  path: req.path,
+});
   res.send(`
     <!DOCTYPE html>
     <html lang="en">
@@ -85,6 +90,47 @@ app.get("/", (req, res) => {
   `);
 });
 
+app.get("/error-demo", (req, res) => {
+  try {
+    throw new Error("Demonstration failure");
+  } catch (error) {
+    logger.error("Request processing failed", {
+      path: req.path,
+      cause: error.message,
+    });
+
+    res.status(500).send("Something went wrong.");
+  }
+});
+
+app.get("/error-demo", (req, res) => {
+  try {
+    throw new Error("Demonstration failure");
+  } catch (error) {
+    logger.error("Request processing failed", {
+      path: req.path,
+      cause: error.message,
+    });
+
+    res.status(500).send("Something went wrong.");
+  }
+});
+
+app.get("/error-demo", (req, res) => {
+  try {
+    throw new Error("Demonstration failure");
+  } catch (error) {
+    logger.error("Request processing failed", {
+      path: req.path,
+      cause: error.message,
+    });
+
+    res.status(500).send("Something went wrong.");
+  }
+});
+
 app.listen(config.port, () => {
-  console.log(`Server running on port ${config.port}`);
+  logger.info("Server started", {
+    port: config.port,
+  });
 });
