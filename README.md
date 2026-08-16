@@ -56,3 +56,20 @@ Refs #1"
 - [Configuration](docs/reference/configuration.md)
 - [Dev Containers](docs/explanation/dev-containers.md)
 - [Architectural decisions](docs/adr/0001-use-dev-container.md)
+
+## Local quality gates
+
+Install the Git hooks after cloning the repository:
+
+```bash
+pre-commit install
+```
+
+Run all configured checks across the repository:
+
+```bash
+pre-commit run --all-files
+```
+
+Hook installation is required per clone because `.git/hooks` is local repository
+state and is not version-controlled.
