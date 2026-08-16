@@ -19,5 +19,5 @@
     8000
   ],
 
-  "postCreateCommand": "python -m pip install --break-system-packages mkdocs-material pre-commit && curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash"
+  "postCreateCommand": "python -m pip install --break-system-packages mkdocs-material pre-commit && curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash -s -- -b /usr/local/bin"
 }
