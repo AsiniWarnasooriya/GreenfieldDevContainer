@@ -9,13 +9,15 @@
   "features": {
     "ghcr.io/devcontainers/features/python:1": {
       "version": "3.11"
-    }
+    },
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
   },
 
   "forwardPorts": [
     3000,
+    4000,
     8000
   ],
 
-  "postCreateCommand": "python -m pip install --break-system-packages mkdocs-material"
+  "postCreateCommand": "python -m pip install --break-system-packages mkdocs-material pre-commit && curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash -s -- -b /usr/local/bin"
 }
